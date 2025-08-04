@@ -1,0 +1,11 @@
+logLevel: info
+
+rtsp: yes
+hls: yes
+hlsAlwaysRemux: yes
+
+paths:
+  mystream:
+    runOnInit: >
+      ffmpeg -re -stream_loop -1 -i "./jamaah.ts" -vf "scale=1280:720" -c:v libx264 -preset ultrafast -tune zerolatency -c:a aac -b:a 128k -ar 44100 -ac 2 -f hls -hls_time 4 -hls_list_size 6 -hls_flags delete_segments public/stream.m3u8
+    runOnInitRestart: yes
