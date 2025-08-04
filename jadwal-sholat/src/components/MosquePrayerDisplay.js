@@ -376,7 +376,7 @@ const MosquePrayerDisplay = () => {
     console.log('🔍 Starting jamaah detection...');
     setDetectionStats(prev => ({ ...prev, isDetecting: true }));
     
-    // Run detection at 6 FPS for better accuracy
+    
     detectionIntervalRef.current = setInterval(detectObjects, 166);
   };
 
