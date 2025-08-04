@@ -2,6 +2,7 @@ logLevel: info
 
 rtsp: yes
 hls: yes
+hls: yes
 hlsAlwaysRemux: yes
 
 paths:
